@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Survey</title>
+    <title>CAPTCHA Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="survey-container">
-        <h1>Welcome to Our Survey</h1>
-        <p>Thank you for participating in our survey. Your feedback is valuable to us.</p>
-        <a href="page1.html" class="start-button">Start Survey</a>
+    <div class="captcha-container">
+        <h1>CAPTCHA Generator</h1>
+        <p>Enter the characters you see below:</p>
+        <div class="captcha">
+            <span id="captcha-text"></span>
+            <button id="refresh-button" onclick="generateCaptcha()">Refresh</button>
+        </div>
+        <input type="text" id="user-input" placeholder="Enter CAPTCHA">
+        <button id="verify-button" onclick="verifyCaptcha()">Verify</button>
+        <p id="result-message"></p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
